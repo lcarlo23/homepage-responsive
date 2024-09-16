@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Playfair Display', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+  font-weight: 100;
+}
+
+header {
+  position: relative;
+  overflow: hidden;
+  min-height: 30vh;
+}
+
+.background {
+  background-color: rgb(16, 145, 177);
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  transform-origin: bottom left;
+  transform: rotate(-10deg) scaleX(150%) translateY(-7px);
+  z-index: -1;
+  box-shadow: 1px 1px 5px gray;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.profile-picture {
+  flex: 1;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 1px 1px 5px gray;
+  min-width: 400px;
+}
+
+.profile-picture img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.profile-picture h2 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: clamp(1rem, 30vw, 2.5rem);
+  font-weight: 100;
+  text-shadow: 1px 1px 5px black;
+}
+
+.about-me {
+  display: flex;
+  flex: 2;
+  padding: 50px;
+  flex-direction: column;
+  gap: 25px;
+  background-color: white;
+  box-shadow: 1px 1px 5px gray;
+}
+
+.header-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.header-icons img {
+  min-height: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.pr-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
+  gap: 25px;
+}
+
+.project {
+  box-shadow: 1px 1px 10px gray;
+}
+
+.screenshot {
+  padding: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screenshot h3 {
+  color: white;
+  font-size: clamp(1rem, 2rem, 2.5rem);
+  text-align: center;
+}
+
+.screen1 {
+  background-color: rgb(157, 25, 29);
+}
+.screen2 {
+  background-color: rgb(122, 115, 201);
+}
+.screen3 {
+  background-color: rgb(94, 143, 77);
+}
+.screen4 {
+  background-color: rgb(194, 96, 179);
+}
+.screen5 {
+  background-color: rgb(215, 142, 59);
+}
+.screen6 {
+  background-color: rgb(74, 162, 209);
+}
+
+.pr-name {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.project p {
+  padding: 0px 20px;
+  font-size: 0.8rem;
+  margin-bottom: 50px;
+}
+
+.icons {
+  display: flex;
+}
+
+.icons img {
+  min-height: 20px;
+}
+
+footer {
+  background-color: rgb(16, 145, 177);
+  color: white;
+  display: flex;
+  padding: 50px;
+  gap: 50px;
+  max-height: 400px;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  flex: 2;
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-icon img {
+  max-width: 25px;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-icons img {
+  min-height: 25px;
+}
+
+.footer-picture {
+  flex: 3;
+  overflow: hidden;
+}
+
+.footer-picture img {
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+@media (max-width: 800px) and (min-width: 600px) {
+  .about-container {
+    display: block;
+    position: relative;
+    padding: 20px;
+  }
+
+  .profile-picture {
+    display: block;
+    position: static;
+    float: left;
+    width: 400px;
+    margin: 10px;
+  }
+
+  .profile-picture h2 {
+    top: 50px;
+    right: 20px;
+    text-align: right;
+  }
+
+  .about-me {
+    margin-top: 100px;
+    margin-left: auto;
+    width: 500px;
+    display: block;
+    padding: 25px;
+  }
+
+  .about-me p {
+    margin: 25px;
+  }
+
+  .header-icons {
+    justify-content: flex-end;
+  }
+
+  .pr-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .about-container {
+    flex-direction: column;
+    padding: 25px;
+    gap: 25px;
+  }
+
+  .background {
+    min-height: 70vh;
+  }
+
+  .profile-picture {
+    aspect-ratio: 9/16;
+  }
+
+  .profile-picture img {
+    height: 100%;
+  }
+
+  .about-me {
+    box-shadow: none;
+    align-items: center;
+  }
+
+  main {
+    place-items: center;
+    gap: 25px;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .pr-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  footer {
+    max-height: none;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-info {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .footer-info h2 {
+    text-align: center;
+  }
+
+  .footer-picture {
+    flex: 1;
+  }
+
+  .contact-icon img {
+    display: none;
+  }
+
+  .footer-icons {
+    justify-content: center;
+  }
+}
